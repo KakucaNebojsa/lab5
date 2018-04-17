@@ -137,3 +137,33 @@
 09:39:04.953 INFO  - Refreshed build settings on project hello_world 
 10:33:44.745 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
 10:36:10.473 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:07:32.919 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+09:07:33.137 ERROR - Unable to read in MSS file C:\Users\student\Desktop\RA147\Zadatak5\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:07:36.757 ERROR - Unable to read in MSS file C:\Users\student\Desktop\RA147\Zadatak5\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:07:36.772 ERROR - Unable to read in MSS file C:\Users\student\Desktop\RA147\Zadatak5\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:07:37.412 WARN  - Unable to determine location of documentation for OS . 
+09:07:37.427 ERROR - Unable to read in MSS file C:\Users\student\Desktop\RA147\Zadatak5\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:07:37.443 ERROR - Unable to read in MSS file C:\Users\student\Desktop\RA147\Zadatak5\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:07:44.104 ERROR - Unable to read in MSS file C:\Users\student\Desktop\RA147\Zadatak5\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:08:03.416 ERROR - Unable to read in MSS file C:\Users\student\Desktop\RA147\Zadatak5\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:08:24.553 ERROR - Unable to read in MSS file C:\Users\student\Desktop\RA147\Zadatak5\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:09:54.906 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+09:09:54.953 ERROR - Unable to read in MSS file C:\Users\student\Desktop\RA147\Zadatak5\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:09:56.887 ERROR - Unable to read in MSS file C:\Users\student\Desktop\RA147\Zadatak5\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:09:56.902 ERROR - Unable to read in MSS file C:\Users\student\Desktop\RA147\Zadatak5\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:09:56.934 WARN  - Unable to determine location of documentation for OS . 
+09:09:56.934 ERROR - Unable to read in MSS file C:\Users\student\Desktop\RA147\Zadatak5\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:09:56.949 ERROR - Unable to read in MSS file C:\Users\student\Desktop\RA147\Zadatak5\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:26:23.442 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+Failed to Scan JTAG Chain
+    Unknown Error
+ 
+09:29:07.285 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/RA147/Zadatak5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:30:39.964 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/RA147/Zadatak5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:50:13.436 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/RA147/Zadatak5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:52:58.918 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/RA147/Zadatak5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:03:47.242 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/RA147/Zadatak5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:20:31.423 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
