@@ -167,3 +167,69 @@ Failed to Scan JTAG Chain
 09:52:58.918 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/RA147/Zadatak5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
 10:03:47.242 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/RA147/Zadatak5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
 10:20:31.423 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:12:58.631 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:19:15.416 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:19:56.584 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:23:45.886 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:24:58.472 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:46:58.113 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:48:06.405 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/RA147/Zadatak5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:48:10.664 ERROR - Unexpected error while launching program. com.xilinx.sdk.targetmanager.TMException: MicroBlaze is under RESET. Check if the Reset input to MicroBlaze and its Bus Interfaces are connected properly
+    UNABLE to STOP MicroBlaze
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+09:48:52.676 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/RA147/Zadatak5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:48:54.813 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+09:50:07.742 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/RA147/Zadatak5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:57:05.108 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:58:23.922 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/RA147/Zadatak5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:09:10.597 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/RA147/Zadatak5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:11:06.013 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/RA147/Zadatak5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:16:30.495 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/RA147/Zadatak5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:18:01.349 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:18:39.819 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:19:42.640 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:20:05.605 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:21:49.970 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:21:53.028 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:22:24.838 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:23:29.692 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:23:40.863 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:24:25.888 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:24:57.479 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:25:57.355 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:27:09.933 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:27:34.437 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

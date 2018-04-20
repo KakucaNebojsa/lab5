@@ -44,7 +44,6 @@ void clear_graphics_screen(Xuint32 BaseAddress){
 void clear_screen(Xuint32 BaseAddress){
 	clear_text_screen(BaseAddress);
 	clear_graphics_screen(BaseAddress);
-
 }
 
 void draw_square(Xuint32 BaseAddress){
@@ -61,6 +60,25 @@ void draw_square(Xuint32 BaseAddress){
 			}
 		}
 }
+
+void move_graph(Xuint32 BaseAddress){
+	int i;
+	int k =1;
+	int j=0;
+	for(i=161; i<320; i=i+k){
+		if(i==319) k=-1;
+		if(i==161) k=1;
+		set_cursor(i);
+		print_char(BaseAddress, 'A');
+		for(j; j<100000; j++){};
+		clear_text_screen(BaseAddress);
+
+	}
+
+}
+
+
+
 
 
 
