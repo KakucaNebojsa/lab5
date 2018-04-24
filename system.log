@@ -27,3 +27,83 @@ rm -f simgen.log
 rm -f __xps/ise/_xmsgs/simgen.xmsgs
 rm -f _impact.cmd
 Done!
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Overriding Xilinx file <TextEditor.cfg> with local file <C:/Xilinx/14.6/ISE_DS/EDK/data/TextEditor.cfg>
+Writing filter settings....
+Done writing filter settings to:
+	C:\Users\student\Desktop\RA147\Zadatak5\lab5\etc\system.filters
+Done writing Tab View settings to:
+	C:\Users\student\Desktop\RA147\Zadatak5\lab5\etc\system.gui
+Writing filter settings....
+Done writing filter settings to:
+	C:\Users\student\Desktop\RA147\Zadatak5\lab5\etc\system.filters
+Done writing Tab View settings to:
+	C:\Users\student\Desktop\RA147\Zadatak5\lab5\etc\system.gui
+Assigned Driver intc 2.06.a for instance axi_intc_0
+axi_intc_0 has been added to the project
+ERROR:EDK:4125 - IPNAME: axi_intc, INSTANCE: axi_intc_0, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_intc, INSTANCE: axi_intc_0, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral axi_intc_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+ERROR:EDK:4125 - IPNAME: axi_intc, INSTANCE: axi_intc_0, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_intc, INSTANCE: axi_intc_0, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral axi_intc_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:2137 - Peripheral axi_intc_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Address Map for Processor microblaze_0
+  (0000000000-0x00007fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00007fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40600000-0x4060ffff) RS232	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x78000000-0x7bffffff) vga_periph_mem_0	axi4lite_0
+  (0x7de00000-0x7de0ffff) my_peripheral_0	axi4lite_0
+WARNING:EDK:2137 - Peripheral axi_intc_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Generated Addresses Successfully
+WARNING:EDK:2137 - Peripheral axi_intc_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:2137 - Peripheral axi_intc_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:2137 - Peripheral axi_intc_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Assigned Driver intc 2.06.a for instance axi_intc_1
+axi_intc_1 has been added to the project
+ERROR:EDK:4125 - IPNAME: axi_intc, INSTANCE: axi_intc_1, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_intc, INSTANCE: axi_intc_1, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral axi_intc_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:2137 - Peripheral axi_intc_1 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+ERROR:EDK:3759 - AddresGen MHS Error Address Generator can not generate address map for your design. Please check if there is address conflict, clear the conflict and re-generate the address map.Please consult the online help for how to let Address Generator to overwrite the address. If Address Generator still can not generate the address map, please provide the address map manually.
+WARNING:EDK:3967 - axi_intc (axi_intc_1) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\Users\student\Desktop\RA147\Zadatak5\lab5\system.mhs line 188 
+WARNING:EDK:2137 - Peripheral axi_intc_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:3967 - axi_intc (axi_intc_1) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\Users\student\Desktop\RA147\Zadatak5\lab5\system.mhs line 188 
+WARNING:EDK:2137 - Peripheral axi_intc_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+INFO:EDK - Use RS232 as reference
+INFO:EDK - Connect bus interface S_AXI to axi4lite_0
+INFO:EDK - Connect clock port S_AXI_ACLK to clk_100_0000MHz
+INFO:EDK - External IO port grouping doneWARNING:EDK - Generate address failed during auto bus connection
+INFO:EDK - Successfully finished auto bus connection for IP instance: axi_intc_1, however there is problem when generating address, please generate address manually
+WARNING:EDK:2137 - Peripheral axi_intc_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+ERROR:EDK:4055 - INST:axi_intc_1 BASEADDR-HIGHADDR:0x000003ff-0x000103fe -  For the memory size of 0x00010000, the least significant 16-bits of BASEADDR must be '0'. BASEADDR must align on a 2^N boundary! - C:\Users\student\Desktop\RA147\Zadatak5\lab5\system.mhs line 188 
+Address Map for Processor microblaze_0
+  (0000000000-0x00007fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00007fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40600000-0x4060ffff) RS232	axi4lite_0
+  (0x41200000-0x4120ffff) axi_intc_1	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x78000000-0x7bffffff) vga_periph_mem_0	axi4lite_0
+  (0x7de00000-0x7de0ffff) my_peripheral_0	axi4lite_0
+WARNING:EDK:2137 - Peripheral axi_intc_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Generated Addresses Successfully
+WARNING:EDK:2137 - Peripheral axi_intc_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+axi_intc_0 has been deleted from the project
+Address Map for Processor microblaze_0
+  (0000000000-0x00007fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00007fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40600000-0x4060ffff) RS232	axi4lite_0
+  (0x41200000-0x4120ffff) axi_intc_1	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x78000000-0x7bffffff) vga_periph_mem_0	axi4lite_0
+  (0x7de00000-0x7de0ffff) my_peripheral_0	axi4lite_0
+Generated Addresses Successfully
+Writing filter settings....
+Done writing filter settings to:
+	C:\Users\student\Desktop\RA147\Zadatak5\lab5\etc\system.filters
+Done writing Tab View settings to:
+	C:\Users\student\Desktop\RA147\Zadatak5\lab5\etc\system.gui

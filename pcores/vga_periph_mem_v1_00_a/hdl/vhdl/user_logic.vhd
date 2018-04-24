@@ -150,8 +150,9 @@ entity user_logic is
     IP2Bus_Data                    : out std_logic_vector(C_SLV_DWIDTH-1 downto 0);
     IP2Bus_RdAck                   : out std_logic;
     IP2Bus_WrAck                   : out std_logic;
-    IP2Bus_Error                   : out std_logic
+    IP2Bus_Error                   : out std_logic;
     -- DO NOT EDIT ABOVE THIS LINE ---------------------
+	 irq 									  : out std_logic
   );
 
   attribute MAX_FANOUT : string;
@@ -191,6 +192,9 @@ architecture IMP of user_logic is
   constant REG_ADDR_04       : std_logic_vector(GRAPH_MEM_ADDR_WIDTH-1 downto 0) := conv_std_logic_vector( 4, GRAPH_MEM_ADDR_WIDTH);
   constant REG_ADDR_05       : std_logic_vector(GRAPH_MEM_ADDR_WIDTH-1 downto 0) := conv_std_logic_vector( 5, GRAPH_MEM_ADDR_WIDTH);
   constant REG_ADDR_06       : std_logic_vector(GRAPH_MEM_ADDR_WIDTH-1 downto 0) := conv_std_logic_vector( 6, GRAPH_MEM_ADDR_WIDTH);
+  constant REG_ADDR_07       : std_logic_vector(GRAPH_MEM_ADDR_WIDTH-1 downto 0) := conv_std_logic_vector( 7, GRAPH_MEM_ADDR_WIDTH);
+  constant REG_ADDR_08       : std_logic_vector(GRAPH_MEM_ADDR_WIDTH-1 downto 0) := conv_std_logic_vector( 8, GRAPH_MEM_ADDR_WIDTH);
+  
   
   constant update_period     : std_logic_vector(31 downto 0) := conv_std_logic_vector(1, 32);
   
@@ -311,6 +315,9 @@ architecture IMP of user_logic is
   signal foreground_color    : std_logic_vector(23 downto 0);
   signal background_color    : std_logic_vector(23 downto 0);
   signal frame_color         : std_logic_vector(23 downto 0);
+  signal v_sync_counter_tc   : std_logic_vector(31 downto 0);
+  signal en 					  : std_logic;
+  signal tc                  : std_logic;
   
   signal vga_vsync_s         : std_logic;
   
@@ -348,17 +355,22 @@ begin
       background_color <= (others => '0');
       foreground_color <= (others => '0');
       frame_color      <= (others => '0');
+		v_sync_counter_tc <= (others => '0');
+		en <= (others => '0');
     elsif (rising_edge(Bus2IP_Clk)) then 
         if (reg_we = '1') then
           case (unit_addr) is
             -- general registers
-            when REG_ADDR_00 => direct_mode      <= Bus2IP_Data(0);
-            when REG_ADDR_01 => display_mode     <= Bus2IP_Data(1 downto 0);
-            when REG_ADDR_02 => show_frame       <= Bus2IP_Data(0);
-            when REG_ADDR_03 => font_size        <= Bus2IP_Data(3 downto 0);
-            when REG_ADDR_04 => foreground_color <= Bus2IP_Data(23 downto 0);
-            when REG_ADDR_05 => background_color <= Bus2IP_Data(23 downto 0);
-            when REG_ADDR_06 => frame_color      <= Bus2IP_Data(23 downto 0);
+            when REG_ADDR_00 => direct_mode       <= Bus2IP_Data(0);
+            when REG_ADDR_01 => display_mode      <= Bus2IP_Data(1 downto 0);
+            when REG_ADDR_02 => show_frame        <= Bus2IP_Data(0);
+            when REG_ADDR_03 => font_size         <= Bus2IP_Data(3 downto 0);
+            when REG_ADDR_04 => foreground_color  <= Bus2IP_Data(23 downto 0);
+            when REG_ADDR_05 => background_color  <= Bus2IP_Data(23 downto 0);
+            when REG_ADDR_06 => frame_color       <= Bus2IP_Data(23 downto 0);
+				when REG_ADDR_07 => v_sync_counter_tc <= Bus2IP_Data(31 downto 0);
+				when REG_ADDR_08 => en 					  <= Bus2IP_Data(0)
+				
             when others => null;
           end case;
         end if;
@@ -544,5 +556,9 @@ begin
     S  => '0'                -- 1-bit set input
   );
   pix_clock_n <= not(pix_clock_s);
-
+  tc <= '1' when v_sync_counter_tc = dir_pixel_row_o else
+		  '0';
+		  
+  irq <= tc and en;
+  
 end IMP;

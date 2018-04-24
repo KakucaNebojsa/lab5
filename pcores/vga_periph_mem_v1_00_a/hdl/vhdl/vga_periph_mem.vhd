@@ -211,8 +211,9 @@ entity vga_periph_mem is
     S_AXI_ARCACHE                  : in  std_logic_vector(3 downto 0);
     S_AXI_ARPROT                   : in  std_logic_vector(2 downto 0);
     S_AXI_RID                      : out std_logic_vector(C_S_AXI_ID_WIDTH-1 downto 0);
-    S_AXI_RLAST                    : out std_logic
+    S_AXI_RLAST                    : out std_logic;
     -- DO NOT EDIT ABOVE THIS LINE ---------------------
+	 irq 									  : out std_logic
   );
 
   attribute MAX_FANOUT : string;
@@ -288,7 +289,8 @@ architecture IMP of vga_periph_mem is
   signal user_IP2Bus_RdAck              : std_logic;
   signal user_IP2Bus_WrAck              : std_logic;
   signal user_IP2Bus_Error              : std_logic;
-
+  signal s_irq									 : std_logic;
+  
 begin
 
   ------------------------------------------
@@ -424,6 +426,7 @@ begin
       IP2Bus_RdAck                   => user_IP2Bus_RdAck,
       IP2Bus_WrAck                   => user_IP2Bus_WrAck,
       IP2Bus_Error                   => user_IP2Bus_Error
+		irq 									 => s_irq
     );
 
   ------------------------------------------
@@ -436,5 +439,5 @@ begin
   ipif_IP2Bus_Error <= user_IP2Bus_Error;
 
   user_Bus2IP_BurstLength(7 downto 0)<= ipif_Bus2IP_BurstLength(7 downto 0);
-
+  irq <= s_irq;
 end IMP;
