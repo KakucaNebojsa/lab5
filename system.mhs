@@ -50,6 +50,7 @@ BEGIN vga_periph_mem
  PORT blue_o = vga_periph_0_blue_o
  PORT direct_mode_i = my_peripheral_0_DIP_Data[0]
  PORT display_mode_i = my_peripheral_0_DIP_Data[2:1]
+ PORT irq = vga_periph_mem_0_irq
 END
 
 # PORT vga_periph_0_display_mode_i_pin = vga_periph_0_display_mode_i, DIR = I, VEC = [1:0]
@@ -165,15 +166,6 @@ BEGIN clock_generator
  PORT CLKIN = CLK
 END
 
-BEGIN axi_intc
- PARAMETER INSTANCE = axi_intc_1
- PARAMETER HW_VER = 1.04.a
- PARAMETER C_BASEADDR = 0x41200000
- PARAMETER C_HIGHADDR = 0x4120ffff
- BUS_INTERFACE S_AXI = axi4lite_0
- PORT S_AXI_ACLK = clk_100_0000MHz
-END
-
 BEGIN axi_interconnect
  PARAMETER INSTANCE = axi4lite_0
  PARAMETER HW_VER = 1.06.a
@@ -195,5 +187,15 @@ BEGIN axi_uartlite
  PORT S_AXI_ACLK = clk_100_0000MHz
  PORT TX = RS232_Uart_1_sout
  PORT RX = RS232_Uart_1_sin
+END
+
+BEGIN axi_intc
+ PARAMETER INSTANCE = axi_intc_0
+ PARAMETER HW_VER = 1.04.a
+ PARAMETER C_BASEADDR = 0x41200000
+ PARAMETER C_HIGHADDR = 0x4120ffff
+ BUS_INTERFACE S_AXI = axi4lite_0
+ PORT S_AXI_ACLK = clk_100_0000MHz
+ PORT Intr = vga_periph_mem_0_irq
 END
 

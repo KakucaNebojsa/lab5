@@ -356,7 +356,7 @@ begin
       foreground_color <= (others => '0');
       frame_color      <= (others => '0');
 		v_sync_counter_tc <= (others => '0');
-		en <= (others => '0');
+		en <= '0';
     elsif (rising_edge(Bus2IP_Clk)) then 
         if (reg_we = '1') then
           case (unit_addr) is
@@ -369,7 +369,7 @@ begin
             when REG_ADDR_05 => background_color  <= Bus2IP_Data(23 downto 0);
             when REG_ADDR_06 => frame_color       <= Bus2IP_Data(23 downto 0);
 				when REG_ADDR_07 => v_sync_counter_tc <= Bus2IP_Data(31 downto 0);
-				when REG_ADDR_08 => en 					  <= Bus2IP_Data(0)
+				when REG_ADDR_08 => en 					  <= Bus2IP_Data(0);
 				
             when others => null;
           end case;
@@ -556,7 +556,7 @@ begin
     S  => '0'                -- 1-bit set input
   );
   pix_clock_n <= not(pix_clock_s);
-  tc <= '1' when v_sync_counter_tc = dir_pixel_row_o else
+  tc <= '1' when v_sync_counter_tc = dir_pixel_row else
 		  '0';
 		  
   irq <= tc and en;

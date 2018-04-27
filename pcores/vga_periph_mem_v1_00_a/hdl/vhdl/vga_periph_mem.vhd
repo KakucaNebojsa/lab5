@@ -425,7 +425,7 @@ begin
       IP2Bus_Data                    => user_IP2Bus_Data,
       IP2Bus_RdAck                   => user_IP2Bus_RdAck,
       IP2Bus_WrAck                   => user_IP2Bus_WrAck,
-      IP2Bus_Error                   => user_IP2Bus_Error
+      IP2Bus_Error                   => user_IP2Bus_Error,
 		irq 									 => s_irq
     );
 
